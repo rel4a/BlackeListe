@@ -1,0 +1,19 @@
+return {
+    ["khawatir890"] = true,
+    ["Username2"] = true,
+    ["Username3"] = true,
+    ["Username4"] = true,
+    ["Username1"] = true,
+    ["Username2"] = true,
+    ["Username3"] = true,
+    ["Username4"] = true,
+    ["Username1"] = true,
+    ["Username2"] = true,
+    ["Username3"] = true,
+    ["Username4"] = true,
+    ["Username1"] = true,
+    ["Username2"] = true,
+    ["Username3"] = true,
+    ["Username4"] = true,
+-- Add as many usernames as you want
+}
