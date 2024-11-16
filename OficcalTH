@@ -15,5 +15,5 @@ return {
     ["Username2"] = true,
     ["Username3"] = true,
     ["Username4"] = true,
--- Add as many usernames as you want
+-- Add as many usernames as you wantss
 }
