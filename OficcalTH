@@ -1,19 +1,15 @@
 -- List of allowed usernames
 local allowedUsernames = {}
 
--- Use loadstring to dynamically load allowed usernames from a remote source
+-- Dynamically load allowed usernames
 local success, errorMessage = pcall(function()
-    -- Replace this URL with your actual remote URL that returns a table of allowed usernames
+    -- Replace this block with actual dynamic loading if needed, or use a static list.
     allowedUsernames = {
-        ["rel4_alt2"] = true, -- Example: replace with actual allowed usernames
-        ["rel4_alt2"] = true,
-        ["rel4_alt2"] = true,
-        ["rel4_alt2"] = true,
-        ["rel4_alt2"] = true,
-        ["rel4_alt2"] = true,
-        ["rel4_alt2"] = true,
-        ["rel4_alt2"] = true,
-        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true, -- Example usernames; replace with actual allowed usernames.
+        ["Player1"] = true,
+        ["Player2"] = true,
+        ["Player3"] = true,
+        ["Player4"] = true,
     }
 end)
 
@@ -21,26 +17,15 @@ if not success then
     warn("Failed to load allowed usernames:", errorMessage)
 end
 
--- Function to check if the current player is allowed to use the script
-local function isPlayerAllowed()
-    local player = game.Players.LocalPlayer
-    return allowedUsernames[player.Name] ~= nil
+-- Function to check if a player is in the whitelist
+local function isPlayerAllowed(playerName)
+    return allowedUsernames[playerName] ~= nil
 end
 
--- Function to kick unauthorized players with a custom message
-local function kickUnauthorizedPlayer()
-    local player = game.Players.LocalPlayer
-    if player then
-        local kickMessage = "You have been perma banned from fallen"
-        player:Kick(kickMessage)
+-- Event triggered when a player joins the game
+game.Players.PlayerAdded:Connect(function(player)
+    if not isPlayerAllowed(player.Name) then
+        -- Kick the player with a custom message
+        player:Kick("You have been permanently banned from fallen!")
     end
-end
-
--- Check if the player is allowed before running the script
-if not isPlayerAllowed() then
-    kickUnauthorizedPlayer()
-    return -- Exit the script if the player is not authorized
-end
-
--- Print message indicating script initialization
-print("Authorization successful. Script can now run.")
+end)
