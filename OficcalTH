@@ -31,7 +31,7 @@ end
 local function kickUnauthorizedPlayer()
     local player = game.Players.LocalPlayer
     if player then
-        local kickMessage = "No Active Membership Or Script Being Rewriten"
+        local kickMessage = "You have been perma banned from fallen"
         player:Kick(kickMessage)
     end
 end
