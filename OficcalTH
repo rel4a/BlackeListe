@@ -1,1 +1,46 @@
+-- List of allowed usernames
+local allowedUsernames = {}
 
+-- Use loadstring to dynamically load allowed usernames from a remote source
+local success, errorMessage = pcall(function()
+    -- Replace this URL with your actual remote URL that returns a table of allowed usernames
+    allowedUsernames = {
+        ["matewhgw"] = true, -- Example: replace with actual allowed usernames
+        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true,
+        ["rel4_alt2"] = true,
+    }
+end)
+
+if not success then
+    warn("Failed to load allowed usernames:", errorMessage)
+end
+
+-- Function to check if the current player is allowed to use the script
+local function isPlayerAllowed()
+    local player = game.Players.LocalPlayer
+    return allowedUsernames[player.Name] ~= nil
+end
+
+-- Function to kick unauthorized players with a custom message
+local function kickUnauthorizedPlayer()
+    local player = game.Players.LocalPlayer
+    if player then
+        local kickMessage = "Free trial has ended!"
+        player:Kick(kickMessage)
+    end
+end
+
+-- Check if the player is allowed before running the script
+if not isPlayerAllowed() then
+    kickUnauthorizedPlayer()
+    return -- Exit the script if the player is not authorized
+end
+
+-- Print message indicating script initialization
+print("Authorization successful. Script can now run.")
