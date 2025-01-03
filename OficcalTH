@@ -5,9 +5,9 @@ local allowedUsernames = {}
 local success, errorMessage = pcall(function()
     -- Replace this URL with your actual remote URL that returns a table of allowed usernames
     allowedUsernames = {
-        ["matewhgw"] = true, -- Example: replace with actual allowed usernames
+        ["matewhgw"] = true, 
         ["rangle12"] = true,
-        ["rel4_alt2"] = true,
+        ["LKHCBCEHFIW"] = true,
         ["rel4_alt2"] = true,
         ["rel4_alt2"] = true,
         ["rel4_alt2"] = true,
