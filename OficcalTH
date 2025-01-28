@@ -11,7 +11,7 @@ local success, errorMessage = pcall(function()
         ["BATANT123456"] = true,
         ["pghcooper12"] = true,
         ["AZruio11"] = true,
-        ["CounterHead_"] = true,
+        ["CounterHead_YT"] = true,
         ["MatuMaka3103_alt3"] = true,
         ["piimaonu123"] = true,
     }
