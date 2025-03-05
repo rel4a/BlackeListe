@@ -11,7 +11,7 @@ local success, errorMessage = pcall(function()
         ["lolardopiola2"] = true,
         ["2barretdouble"] = true,
         ["PhilipsEnjoyer"] = true,
-        ["rel4_alt2"] = true,
+        ["wizardfire333"] = true,
         ["rel4_alt2"] = true,
         ["rel4_alt2"] = true,
     }
